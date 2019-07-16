@@ -14,6 +14,14 @@ namespace W1_LINQ_Examples
         public float UnitPrice { get; set; }
         public int CategoryID { get; set; }
 
-
+        public override string ToString()
+        {
+            return String.Concat("Product ID : ", ProductID.ToString(),
+                                 ", Description : ", Description.ToString(),
+                                 ", Quanity in Stock : ", QuantityInStock.ToString(),
+                                 ", Unit Price :", UnitPrice.ToString(),
+                                 ", Category Id : ", CategoryID.ToString()
+                                 );
+        }
     }
 }

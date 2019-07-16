@@ -5,6 +5,7 @@ namespace W1_LINQ_Examples
 {
     class ProductModel
     {
+        // This is our class that will hold our collections and our instantiated objects
         public List<Supplier> Suppliers = new List<Supplier>()
         {
             new Supplier{SupplierID = 1,  SupplierName = "Parts 1", SupplierAddressLine1 = "Addr 11", AddressLine2 = "Addr 21", },

@@ -13,7 +13,7 @@ namespace W1_LINQ_Examples
 
         public override string ToString()
         {
-            return String.Concat("Category Id : ", id.ToString(), " Description : ", Description.ToString() );
+            return String.Concat("Category Id : ", id.ToString(), ", Description : ", Description.ToString() );
         }
     }
 }
