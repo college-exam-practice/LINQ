@@ -11,7 +11,7 @@ namespace W1_LINQ_Examples
         public int ProductID { get; set; }
         public string Description { get; set; }
         public int QuantityInStock { get; set; }
-        public int UnitPrice { get; set; }
+        public float UnitPrice { get; set; }
         public int CategoryID { get; set; }
 
 
