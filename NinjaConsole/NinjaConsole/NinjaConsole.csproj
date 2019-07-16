@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6625F39F-1D29-41D3-9C09-3068DE10D73F}</ProjectGuid>
+    <ProjectGuid>{E60B4969-F2FA-4256-ADEF-9E5457F4F189}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>NinjaConsole</RootNamespace>
     <AssemblyName>NinjaConsole</AssemblyName>
