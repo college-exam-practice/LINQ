@@ -71,10 +71,49 @@ namespace W1_LINQ_Examples
             foreach (var item in Query5a)
             {
                 Console.WriteLine(item);
-
             }
 
-                                
+            Console.WriteLine("\nQuery 6: List all the Suppliers and there Parts ordered by supplier name");
+            var Query6 = (from s in pModel.Suppliers
+                          join sp in pModel.SupplierProducts
+                          on s.SupplierID equals sp.SupplierID
+                          join p in pModel.Products on
+                          sp.ProductID equals p.ProductID
+                          select new
+                          {
+                              s.SupplierName,
+                              p.Description,
+                          }).OrderBy(o => o.SupplierName);
+            foreach (var item in Query6)
+            {
+                Console.WriteLine("Supplier name: " + item.SupplierName, "\t\tParts: " +item.Description);
+            }
+
+            Console.WriteLine("\nPaul Powel sample");
+            var Query6a = (from p in pModel.Products
+                            join sp in pModel.SupplierProducts
+                            on p.ProductID equals sp.SupplierID
+                            join s in pModel.Suppliers
+                            on sp.SupplierID equals s.SupplierID
+                            orderby s.SupplierName
+                            select new
+                            {
+                                supplierName = s.SupplierName,p
+                            });
+
+            string CurrentSupplier = Query6.First().SupplierName;
+            Console.WriteLine("Parts for {0}", CurrentSupplier);
+            foreach (var item in Query6)
+            {
+                // if there is a new supplier being iterated over
+                // change the Current Supplier label
+                if (item.SupplierName != CurrentSupplier)
+                {
+                    CurrentSupplier = item.SupplierName;
+                    Console.WriteLine("Parts for {0}", CurrentSupplier);
+                }
+                Console.WriteLine("{0}", item.Description.ToString());
+            }
         }
     }
 }
