@@ -29,6 +29,16 @@ namespace W1_LINQ_Examples
             {
                 Console.WriteLine("{0}", product.ToString());
             }
+
+            // Query 3 - Products with Quantity <= 100
+            List<Product> Query3 = db.Products
+                .Where(p => p.QuantityInStock <= 100)
+                .ToList();
+            Console.WriteLine("\nQuery 3: Products less than or equal to 100");
+            foreach (var product in Query3)
+            {
+                Console.WriteLine("{0}", product.ToString());
+            }
             
         }
     }
