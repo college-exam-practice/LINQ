@@ -10,7 +10,14 @@ namespace W1_LINQ_Examples
     {
         static void Main(string[] args)
         {
-            
+            ProductModel db = new ProductModel();
+            List<Category> Query1 = db.Categories;
+            Console.WriteLine("Query 1: Category List");
+            foreach (var item in Query1)
+            {
+                Console.WriteLine("{0}", item.ToString());
+            }
+
         }
     }
 }

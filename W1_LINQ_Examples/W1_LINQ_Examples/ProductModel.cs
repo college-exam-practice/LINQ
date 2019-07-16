@@ -31,9 +31,6 @@ namespace W1_LINQ_Examples
             new SupplierProduct{SupplierID = 1, ProductID = 2, DateFirstSupplied = DateTime.Parse("06/01/2013")},
             new SupplierProduct{SupplierID = 2, ProductID = 3, DateFirstSupplied = DateTime.Parse("09/09/2017")},
             new SupplierProduct{SupplierID = 2, ProductID = 4, DateFirstSupplied = DateTime.Parse("10/09/2017")},
-
-
-
         };
     }
 }
