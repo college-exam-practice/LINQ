@@ -62,7 +62,17 @@ namespace W1_LINQ_Examples
             {
                 Console.WriteLine("{0} is a piece of {1}", item.product.Description.ToString(), item.categories.Description);
             }
-           // var Query5a = from c in pModel.Categories
+            Console.WriteLine("\nSQL sample: Look in code");
+            var Query5a = from c in pModel.Categories
+                          join p in pModel.Products
+                          on c.id equals p.CategoryID
+                          where c.Description == "Hardware"
+                          select p;
+            foreach (var item in Query5a)
+            {
+                Console.WriteLine(item);
+
+            }
 
                                 
         }
