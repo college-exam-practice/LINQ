@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace W1_LINQ_Examples
 {
-    class Program
+    class Category
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        public int id { get; set; }
+        public string Description { get; set; }
     }
 }
